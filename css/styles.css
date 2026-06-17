@@ -1,4 +1,3 @@
-/* ---- Estilos Globales y Reset ---- */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +9,7 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #faf8f5;
+    padding: 0;
 }
 
 .container {
@@ -21,9 +21,8 @@ body {
 .text-center { text-align: center; }
 .bg-light { background-color: #f0eae4; }
 
-/* ---- Tipografía y Botones ---- */
 h1, h2, h3, h4 {
-    color: #4a2818; /* Tono café arcilla cálido y social */
+    color: #4a2818;
 }
 
 .btn-primary, .btn-secondary, .btn-card {
@@ -32,21 +31,18 @@ h1, h2, h3, h4 {
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #2e6f40; /* Verde institucional / esperanza */
+    background-color: #2e6f40;
     color: #ffffff;
 }
-.btn-primary:hover { background-color: #1e4b2a; }
 
 .btn-secondary {
-    background-color: #bc6c25; /* Ocre / Calidez */
+    background-color: #bc6c25;
     color: #ffffff;
 }
-.btn-secondary:hover { background-color: #9b5418; }
 
 .btn-card {
     background-color: #4a2818;
@@ -54,36 +50,23 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
     border: none;
 }
-.btn-card:hover { background-color: #2b140a; }
 
-button:disabled {
-    background-color: #cccccc !important;
-    color: #666666 !important;
-    cursor: not-allowed;
-}
-
-/* ---- Encabezado Comercial ---- */
 .main-header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .main-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .logo {
     font-size: 1.6rem;
     font-weight: 800;
 }
-.logo a { text-decoration: none; color: #4a2818; }
 .logo span { color: #2e6f40; }
 
 .main-nav a {
@@ -92,21 +75,16 @@ button:disabled {
     margin-left: 20px;
     font-weight: 600;
 }
-.main-nav a:hover, .main-nav a.active {
-    color: #2e6f40;
-}
 
-/* ---- Secciones de la Landing Page ---- */
 .hero {
-    background: linear-gradient(rgba(74, 40, 24, 0.8), rgba(46, 111, 64, 0.7)), url('../assets/img/hero-bg.jpg') no-repeat center center/cover;
-    background-color: #4a2818; /* Fallback */
+    background-color: #4a2818;
     color: #ffffff;
     padding: 80px 0;
     text-align: center;
 }
 
 .hero h2 { color: #ffffff; font-size: 2.3rem; margin-bottom: 15px; }
-.hero p { max-width: 700px; margin: 0 auto 25px auto; font-size: 1.1rem; }
+.hero p { max-width: 700px; margin: 0 auto 25px auto; }
 
 .inner-section, .directory-section, .collab-section {
     padding: 60px 0;
@@ -116,10 +94,8 @@ button:disabled {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 40px;
-    position: relative;
 }
 
-/* ---- Rejillas y Tarjetas (Grids) ---- */
 .grid-directory, .grid-stories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -130,18 +106,10 @@ button:disabled {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    overflow: hidden;
     position: relative;
     border: 1px solid #eaddcf;
-}
-
-.card-content, .story-body {
     padding: 25px;
 }
-
-.card h3, .story-body h3 { margin-bottom: 10px; font-size: 1.3rem; }
-.location-tag { color: #777777; font-size: 0.9rem; margin-bottom: 12px; }
-.card p { margin-bottom: 20px; color: #555555; }
 
 .card-badge {
     position: absolute;
@@ -156,29 +124,10 @@ button:disabled {
 .badge-success { background-color: #2e6f40; }
 .badge-pending { background-color: #999999; }
 
-.card-disabled { opacity: 0.85; background-color: #fdfdfd; }
-
-/* ---- Estilos de Historias ---- */
-.story-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.story-img-placeholder {
-    font-size: 3.5rem;
-    background-color: #f0eae4;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-}
-.story-body p { font-style: italic; color: #444444; }
-
-/* ---- Estilos de Donaciones ---- */
 .grid-bank-accounts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-top: 30px;
 }
 
 .bank-card {
@@ -186,39 +135,14 @@ button:disabled {
     padding: 30px;
     border-radius: 6px;
     border-left: 5px solid #bc6c25;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
-.bank-card h4 { margin-bottom: 15px; font-size: 1.1rem; }
-.bank-name { color: #2e6f40; font-weight: bold; }
-.account-number { font-size: 1.2rem; margin: 8px 0; color: #111; }
-
-/* ---- Info Adicional e iframe de Mapa ---- */
-.page-title-banner { background-color: #4a2818; color: #ffffff; padding: 45px 0; text-align: center; }
-.page-title-banner h2 { color: white; font-size: 2.2rem; }
-.category-tag { background-color: #2e6f40; padding: 3px 10px; border-radius: 3px; font-size: 0.8rem; font-weight: bold; }
 
 .grid-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
-    align-items: center;
 }
 
-.schedule-box { background-color: #f0eae4; padding: 20px; border-radius: 6px; margin: 20px 0; }
-.schedule-box ul { list-style: none; padding-left: 0; }
-.schedule-box li { margin-bottom: 8px; }
-.note { font-size: 0.9rem; color: #666; }
-.map-container { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.schedule-box { background-color: #f0eae4; padding: 20px; border-radius: 6px; }
 
-/* ---- Footer ---- */
-.main-footer { background-color: #221109; color: #b5a49c; padding: 30px 0; font-size: 0.9rem; }
-.back-link { color: #ffffff; text-decoration: none; display: inline-block; margin-bottom: 10px; }
-.back-link:hover { color: #bc6c25; }
-
-/* ---- Responsive (Pantallas Pequeñas) ---- */
-@media (max-width: 768px) {
-    .main-header .container { flex-direction: column; text-align: center; }
-    .main-nav { margin-top: 15px; }
-    .main-nav a { margin: 0 10px; }
-    .hero h2 { font-size: 1.8rem; }
-}
+.main-footer { background-color: #221109; color: #b5a49c; padding: 30px 0; text-align: center; }
